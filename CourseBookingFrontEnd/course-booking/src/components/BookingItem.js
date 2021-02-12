@@ -1,9 +1,11 @@
 
-const BookingItem = () => {
+const BookingItem = ({date, customer, course}) => {
 
     return (
         <>
-            <h3>BookingItem</h3>
+            <h3>{date}</h3>
+            <p>{customer}</p>
+            <p>{course}</p>
         </>
     )
 }
