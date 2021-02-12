@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import DataContainer from "./containers/DataContainer"
+import {useState, useEffect } from "react"
+
 
 function App() {
+
+  const [bookings, setBookings] = useState([]);
+  const [courses, setCourses] = useState([]);
+  const [customers, setCustomers] = useState([]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>App</h1>
+      <DataContainer />
     </div>
   );
 }
