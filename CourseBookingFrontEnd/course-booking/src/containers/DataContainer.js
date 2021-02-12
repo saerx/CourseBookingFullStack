@@ -9,7 +9,6 @@ const DataContainer = ({bookings, customers, courses}) => {
 
     return (
         <div>
-            <h1>Data Container</h1>
             <div className="data-flex">
                 <div className="customers">
                     <CustomersList customers={customers}/>

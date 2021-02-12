@@ -65,7 +65,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>App</h1>
+      <h1>Course Bookings</h1>
       <DataContainer 
           bookings={bookings}
           customers={customers}

@@ -15,7 +15,7 @@ const CustomersList = ({customers}) => {
 
     return (
         <>
-            <h2>CustomersList</h2>
+            <h2>Customers</h2>
             <ul id="list">
                 {customerNodes}
             </ul>

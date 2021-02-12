@@ -14,7 +14,7 @@ const CoursesList = ({courses})=>{
 
     return (
         <>
-            <h2>Courses List</h2>
+            <h2>Courses</h2>
             <ul id="list">
                 {courseNodes}
             </ul>

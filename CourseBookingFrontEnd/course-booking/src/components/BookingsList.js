@@ -21,7 +21,7 @@ const BookingsList = ({bookings}) => {
     return (
 
         <div>
-            <h2>Bookings List</h2>
+            <h2>Bookings</h2>
             <ul id="list">
                 {bookingNodes}
             </ul>
