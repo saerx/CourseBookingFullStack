@@ -1,9 +1,11 @@
-const CourseItem = () => {
+const CourseItem = ({course}) => {
 
     return (
-        <>
-            <h3>CourseItem</h3>
-        </>
+        <div id="item">
+            <h3>{course.name}</h3>
+            <p>Location: {course.town}</p>
+            <p>Star Rating: {course.starRating}</p>
+        </div>
     )
 }
 

@@ -4,21 +4,21 @@ import CoursesList from "../components/CoursesList"
 import "./DataContainer.css"
 
 
-const DataContainer = ({bookings}) => {
+const DataContainer = ({bookings, customers, courses}) => {
 
 
     return (
         <div>
             <h1>Data Container</h1>
             <div className="data-flex">
-                <div className="bookings">
-                    <BookingsList bookings={bookings}/>
-                </div>
                 <div className="customers">
-                    <CustomersList/>
+                    <CustomersList customers={customers}/>
                 </div>
                 <div className="courses">
-                    <CoursesList/>
+                    <CoursesList courses={courses}/>
+                </div>
+                <div className="bookings">
+                    <BookingsList bookings={bookings}/>
                 </div>
             </div>
         </div>

@@ -1,6 +1,29 @@
 .data-flex {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* .bookings {
+    border: 1px solid black;
+}
+
+.courses {
+    border: 1px solid black;
+}
+
+.customers {
+    border: 1px solid black;
+} */
+
+#item {
+    border: 1px solid black;
+}
+
+#list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
 }

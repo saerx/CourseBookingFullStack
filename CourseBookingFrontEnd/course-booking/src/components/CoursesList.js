@@ -1,13 +1,22 @@
 import CourseItem from "./CourseItem"
 
-const CoursesList = ()=>{
+const CoursesList = ({courses})=>{
 
+    const courseNodes = courses.map((course) => {
+
+        return(
+            <CourseItem 
+                course={course}
+                key={course.id}
+            />
+        )
+    })
 
     return (
         <>
-            <h2>CoursesList</h2>
-            <ul>
-                <CourseItem/>
+            <h2>Courses List</h2>
+            <ul id="list">
+                {courseNodes}
             </ul>
         </>
     )

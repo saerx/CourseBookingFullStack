@@ -22,7 +22,7 @@ const BookingsList = ({bookings}) => {
 
         <div>
             <h2>Bookings List</h2>
-            <ul>
+            <ul id="list">
                 {bookingNodes}
             </ul>
         </div>

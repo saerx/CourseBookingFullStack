@@ -1,9 +1,11 @@
-const CustomerItem = () => {
+const CustomerItem = ({customer}) => {
 
     return (
-        <>
-            <h3>CustomerItem</h3>
-        </>
+        <div id="item">
+            <h3>{customer.name}</h3>
+            <p>Location: {customer.town}</p>
+            <p>Age: {customer.age}</p>
+        </div>
     )
 }
 
