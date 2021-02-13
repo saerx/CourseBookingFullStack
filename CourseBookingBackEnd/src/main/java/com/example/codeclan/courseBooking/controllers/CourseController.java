@@ -22,6 +22,9 @@ public class CourseController {
             @RequestParam(name="starRating", required = false) Integer starRating,
             @RequestParam(name="customerName", required = false) String customerName
     ){
+        if (starRating != null && customerName != null){
+            return new ResponseEntity<>(courseRepository.findByStarRatingAndBookingsCustomerName(starRating, customerName), HttpStatus.OK);
+        }
         if (starRating != null){
             return new ResponseEntity<>(courseRepository.findByStarRating(starRating), HttpStatus.OK);
         }

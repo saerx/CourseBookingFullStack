@@ -17,14 +17,14 @@ const CourseSelector = ({customers, changeCourseQuery}) => {
     useEffect(()=>{
         let newCourseQuery = ""
         if (selectedCustomer && starRating) {
-            newCourseQuery = ""
+            newCourseQuery = `?starRating=${starRating}&customerName=${selectedCustomer}`
         } else if (selectedCustomer && !starRating){
             newCourseQuery = `?customerName=${selectedCustomer}`
         } else if (!selectedCustomer && starRating){
             newCourseQuery = `?starRating=${starRating}`
         }
         changeCourseQuery(newCourseQuery)
-    })
+    }, [selectedCustomer, starRating])
 
     const customerOptions = customers.map((customer) => {
 
@@ -35,13 +35,13 @@ const CourseSelector = ({customers, changeCourseQuery}) => {
 
     return (
         <div>
-            <h4>Please only choose either a star rating or a customer to filter by</h4>
             <select 
                 name="customer-selector"
                 id="customer-selector"
                 onChange={handleSelectedCustomerChange}
             >
                 <option value="">Filter courses by customer</option>
+                <option value="">All customers</option>
                 {customerOptions}
             </select>
             <br/>
@@ -51,6 +51,7 @@ const CourseSelector = ({customers, changeCourseQuery}) => {
                 onChange={handleStarChange}
             >
                 <option value="">Filter courses by star rating</option>
+                <option value="">All ratings</option>
                 <option value="1">🌟</option>
                 <option value="2">🌟🌟</option>
                 <option value="3">🌟🌟🌟</option>
