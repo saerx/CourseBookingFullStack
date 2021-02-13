@@ -14,7 +14,6 @@ const CoursesList = ({courses})=>{
 
     return (
         <>
-            <h2>Courses</h2>
             <ul id="list">
                 {courseNodes}
             </ul>

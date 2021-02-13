@@ -24,6 +24,7 @@ const BookingSelector = ({changeBookingQuery}) => {
 
         <div >
             <label for="booking-date">Choose Booking Date: </label>
+            <br/>
             <input type="date" id ="booking-date" name="booking-date"
                    value={date} min="2020-06-01" max="2021-12-01"
                    onChange={handleDateChange}></input>

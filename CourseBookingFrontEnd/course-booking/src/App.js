@@ -10,6 +10,8 @@ function App() {
   const [customers, setCustomers] = useState([]);
 
   const [bookingQuery, setBookingQuery] = useState("");
+  const [courseQuery, setCourseQuery] = useState("");
+  const [customerQuery, setCustomerQuery] = useState("");
 
   // const fetchAll = () => {
     // const urls = [`http://localhost:8080/bookings`, `http://localhost:8080/courses`, `http://localhost:8080/customers`]
@@ -36,7 +38,7 @@ function App() {
 
   const fetchCourses = () => {
     console.log("getting courses..")
-    const allCoursesUrl = `http://localhost:8080/courses`
+    const allCoursesUrl = `http://localhost:8080/courses/${courseQuery}`
     
     fetch(allCoursesUrl)
       .then(res => res.json())
@@ -45,7 +47,7 @@ function App() {
 
   const fetchCustomers = () => {
     console.log("getting customers..")
-    const allCustomersUrl = `http://localhost:8080/customers`
+    const allCustomersUrl = `http://localhost:8080/customers/${customerQuery}`
     
     fetch(allCustomersUrl)
       .then(res => res.json())
@@ -56,17 +58,25 @@ function App() {
       setBookingQuery(newQuery);
   }
 
+  const changeCourseQuery = (newQuery) => {
+    setCourseQuery(newQuery);
+  }
+
+  const changeCustomerQuery = (newQuery) => {
+    setCustomerQuery(newQuery);
+  }
+
   useEffect(() => {
     fetchBookings()
   }, [bookingQuery])
 
   useEffect(() => {
     fetchCourses()
-  }, [])
+  }, [courseQuery])
 
   useEffect(() => {
     fetchCustomers()
-  }, [])
+  }, [customerQuery])
 
 
   return (
@@ -77,6 +87,8 @@ function App() {
           customers={customers}
           courses={courses}
           changeBookingQuery={changeBookingQuery}
+          changeCourseQuery={changeCourseQuery}
+          changeCustomerQuery={changeCustomerQuery}
         />
     </div>
   );

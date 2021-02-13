@@ -15,7 +15,6 @@ const CustomersList = ({customers}) => {
 
     return (
         <>
-            <h2>Customers</h2>
             <ul id="list">
                 {customerNodes}
             </ul>
