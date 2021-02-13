@@ -35,13 +35,13 @@ const CourseSelector = ({customers, changeCourseQuery}) => {
 
     return (
         <div>
-            <h4>Please choose either a customer or a star rating to sort courses</h4>
+            <h4>Please only choose either a star rating or a customer to filter by</h4>
             <select 
                 name="customer-selector"
                 id="customer-selector"
                 onChange={handleSelectedCustomerChange}
             >
-                <option value="">Select courses by customer attending</option>
+                <option value="">Filter courses by customer</option>
                 {customerOptions}
             </select>
             <br/>
@@ -50,7 +50,7 @@ const CourseSelector = ({customers, changeCourseQuery}) => {
                 id="starRating-selector"
                 onChange={handleStarChange}
             >
-                <option value="">Select courses by star rating</option>
+                <option value="">Filter courses by star rating</option>
                 <option value="1">🌟</option>
                 <option value="2">🌟🌟</option>
                 <option value="3">🌟🌟🌟</option>

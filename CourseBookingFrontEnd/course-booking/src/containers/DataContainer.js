@@ -15,7 +15,7 @@ const DataContainer = ({bookings, customers, courses, changeBookingQuery, change
             <div className="data-flex">
                 <div className="customers">
                     <h2>Customers</h2>
-                    <CustomerSelector changeCustomerQuery={changeCustomerQuery}/>
+                    <CustomerSelector courses={courses} changeCustomerQuery={changeCustomerQuery}/>
                     <CustomersList customers={customers}/>
                 </div>
                 <div className="courses">
