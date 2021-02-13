@@ -5,7 +5,7 @@ import CoursesList from "../components/CoursesList"
 import "./DataContainer.css"
 
 
-const DataContainer = ({bookings, customers, courses}) => {
+const DataContainer = ({bookings, customers, courses, changeBookingQuery}) => {
 
 
     return (
@@ -19,7 +19,7 @@ const DataContainer = ({bookings, customers, courses}) => {
                 </div>
                 <div className="bookings">
                     <h2>Bookings</h2>
-                    <BookingSelector />
+                    <BookingSelector changeBookingQuery={changeBookingQuery}/>
                     <BookingsList bookings={bookings}/>
                 </div>
             </div>
